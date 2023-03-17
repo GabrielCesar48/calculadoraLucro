@@ -35,5 +35,8 @@ btnCalcularRef.addEventListener('click',  () => {
 
     percentualVendaRef.innerHTML = resultadoPorcentagem
 
+    inputBuyRef.value = ''
+    inputSellRef.value = ''
+
 
 })
