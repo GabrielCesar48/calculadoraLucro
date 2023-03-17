@@ -52,7 +52,7 @@
 
 .svgTexto {
     /* display: block; */
-    font: 26px 'Montserrat';
+    font: 22px 'Montserrat';
     margin: 0 auto;
     height: 2em;
     width: 100%;
@@ -62,7 +62,7 @@
     fill: none;
     stroke: white;
     stroke-dasharray: 6% 29%;
-    stroke-width: 1.5px;
+    stroke-width: 1.3px;
     stroke-dashoffset: 0%;
     animation: stroke-offset 5.5s infinite linear;
 }
