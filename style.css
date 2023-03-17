@@ -52,9 +52,9 @@
 
 .svgTexto {
     /* display: block; */
-    font: 22px 'Montserrat';
+    font: 1.3rem 'Montserrat';
     margin: 0 auto;
-    height: 2em;
+    height: 2.5em;
     width: 100%;
 }
 
