@@ -2,6 +2,7 @@
 
 .form-control::placeholder {
     color: rgba(207, 207, 207, 0.425);
+    font-size: 12px;
 }
 
 
@@ -36,18 +37,32 @@
     font-weight: bolder;
 }
 
+#validValorCompra {
+    display: none;
+}
+
+#validValorVenda {
+    display: none;
+}
+
+
+
+
+
+
 .svgTexto {
     /* display: block; */
-    font: 6.5em 'Montserrat';
+    font: 26px 'Montserrat';
     margin: 0 auto;
-    height: 1em;
+    height: 2em;
+    width: 100%;
 }
 
 .text-copy {
     fill: none;
     stroke: white;
     stroke-dasharray: 6% 29%;
-    stroke-width: 5px;
+    stroke-width: 1.5px;
     stroke-dashoffset: 0%;
     animation: stroke-offset 5.5s infinite linear;
 }
@@ -73,7 +88,7 @@
 }
 
 .text-copy:nth-child(5){
-	stroke: #FDB731;
+	stroke: #EFFFFA;
 	animation-delay: -5s;
 }
 
