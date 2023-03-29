@@ -1,5 +1,30 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
+body {
+    background-image: url(../assets/img/sl_043021_42650_04-ai\ \(1\).png);
+    background-size: cover;
+    background-position: center center;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-image: url(../assets/img/fundo-calc-descontoMOBILE.svg);
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+
+.form-style {
+    border-color: #ffffff !important;
+}
+
+.form-style::placeholder {
+    color: rgba(207, 207, 207, 0.712);
+    font-size: 0.6em;
+    border-color: #ffffff;
+}
+
 .form-control::placeholder {
     color: rgba(207, 207, 207, 0.425);
     font-size: 12px;
@@ -13,11 +38,18 @@
 }
 
 .texto__resultado {
-    background-color: #35393C;
-    color: #EFFFFA;
+    background-color: transparent;
+    color: #ffffff !important;
     font-weight: bolder;
     border: none;
 }
+
+.resultado {
+    color: #ffffff !important;
+    font-weight: bold !important;
+    margin: 0;
+}
+
 
 .fundo__ {
     background-color: #35393C;
@@ -52,7 +84,7 @@
 
 .svgTexto {
     /* display: block; */
-    font: 1.3rem 'Montserrat';
+    font: 3rem 'Montserrat';
     margin: 0 auto;
     height: 2.5em;
     width: 100%;
@@ -62,7 +94,7 @@
     fill: none;
     stroke: white;
     stroke-dasharray: 6% 29%;
-    stroke-width: 1.3px;
+    stroke-width: 2.5px;
     stroke-dashoffset: 0%;
     animation: stroke-offset 5.5s infinite linear;
 }
@@ -95,3 +127,33 @@
 @keyframes stroke-offset{
 	100% {stroke-dashoffset: -35%;}
 }
+
+
+.justificado {
+    text-align: justify;
+}
+
+
+.mt-6 {
+    margin-top: 9rem !important;
+  }
+  
+  .m-7 {
+    margin: 6rem !important;
+  }
+  
+  .m-8 {
+    margin: 8rem !important;
+  }
+  
+  .active {
+    color: #24348E !important;
+  }
+
+  .nav-link:hover {
+    color: #E40321 !important;
+  }
+
+  .icon-hover:hover {
+    color: #E40321 !important;
+  }
