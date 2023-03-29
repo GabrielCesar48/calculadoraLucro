@@ -15,7 +15,8 @@ var validValorVendaRef = document.querySelector('#validValorVenda')
 
 
 inputBuyRef.addEventListener('keyup', () => {
-    if (isNaN(inputBuyRef.value) || inputBuyRef.value == 0) {
+    if (isNaN(inputBuyRef.value.replace(",",".")) || inputBuyRef.value.replace(",",".") == 0) {
+
         validValorCompraRef.style.display = 'block'
     } else {
         validValorCompraRef.style.display = 'none'
@@ -23,7 +24,7 @@ inputBuyRef.addEventListener('keyup', () => {
 })
 
 inputSellRef.addEventListener('keyup', () => {
-    if (isNaN(inputSellRef.value) || inputSellRef.value == 0) {
+    if (isNaN(inputSellRef.value.replace(",",".")) || inputSellRef.value.replace(",",".") == 0) {
         validValorVendaRef.style.display = 'block'
     } else {
         validValorVendaRef.style.display = 'none'
@@ -36,7 +37,7 @@ inputSellRef.addEventListener('keyup', () => {
 
 btnCalcularRef.addEventListener('click',  () => {
 
-    if (isNaN(inputBuyRef.value) || inputBuyRef.value == 0 || isNaN(inputSellRef.value) || inputSellRef.value == 0) {
+    if (isNaN(inputBuyRef.value.replace(",",".")) || inputBuyRef.value.replace(",",".") == 0 || isNaN(inputSellRef.value.replace(",",".")) || inputSellRef.value.replace(",",".") == 0) {
         alert('Você deve digitar um valor válido.')
         let erroValor = `<p>Valor inválido</p>`
         lucroVendaRef.innerHTML = erroValor
@@ -45,8 +46,9 @@ btnCalcularRef.addEventListener('click',  () => {
     }
 
 
-    var buyValor = parseFloat(inputBuyRef.value.replace(",","."))
-    var sellValor = parseFloat(inputSellRef.value.replace(",","."))    
+    var buyValor = parseFloat(inputBuyRef.value.replace(",",".").replace(/[^0-9\.]/g,''))
+    var sellValor = parseFloat(inputSellRef.value.replace(",",".").replace(/[^0-9\.]/g,''))    
+
 
     var lucro = (sellValor - buyValor)
     var porcentagem = ((sellValor / buyValor)-1) *100
